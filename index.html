@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated SEO details to focus on the corporate brand, SparkyMinis -->
+    <meta name="description" content="SparkyMinis is a media and technology company building simple, powerful, and offline-first tools for a wide range of use cases.">
+    <meta name="keywords" content="SparkyMinis, media, technology, software, apps, web development, PWA, tools, corporate, LipiKit">
+    <title>SparkyMinis</title>
+    <!-- Favicon using a lightning bolt emoji -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
+    <!-- Use Tailwind CSS for a professional, responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Define CSS variables for themes. Default is now orange. */
+        :root {
+            --primary-color: #f97316; /* Orange-500 */
+            --primary-light: #fff7ed; /* Orange-100 */
+            --ring-color: #fed7aa; /* Orange-200 */
+        }
+        
+        /* Theming classes will be managed by JavaScript */
+        .theme-purple {
+            --primary-color: #9333ea; /* Purple-600 */
+            --primary-light: #f3e8ff; /* Purple-100 */
+            --ring-color: #e9d5ff; /* Purple-200 */
+        }
+
+        .theme-blue {
+            --primary-color: #3b82f6; /* Blue-500 */
+            --primary-light: #eff6ff; /* Blue-100 */
+            --ring-color: #dbeafe; /* Blue-200 */
+        }
+
+        /* Apply variables to Tailwind classes */
+        .bg-primary { background-color: var(--primary-color); }
+        .bg-primary-light { background-color: var(--primary-light); }
+        .text-primary { color: var(--primary-color); }
+        .ring-primary { --tw-ring-color: var(--ring-color); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Theme Switcher UI -->
+    <div class="fixed top-4 right-4 z-50 flex space-x-2 rounded-full bg-white p-1 shadow-md">
+        <button id="theme-purple" class="w-8 h-8 rounded-full bg-purple-600 transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-600"></button>
+        <button id="theme-blue" class="w-8 h-8 rounded-full bg-blue-500 transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500"></button>
+        <button id="theme-orange" class="w-8 h-8 rounded-full bg-orange-500 transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-orange-500"></button>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="relative bg-white py-16 md:py-24 overflow-hidden rounded-b-3xl">
+        <!-- Abstract gradient for visual interest -->
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-light to-white -z-10"></div>
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml;utf8,<svg width=\'100%\' height=\'100%\' xmlns=\'http://www.w3.org/2000/svg\'><pattern id=\'grid\' width=\'100\' height=\'100\' patternUnits=\'userSpaceOnUse\'><path d=\'M 100 0 L 0 0 0 100\' fill=\'none\' stroke=\'#d1d5db\' stroke-width=\'1\'/></pattern><rect width=\'100%\' height=\'100%\' fill=\'url(#grid)\' /></svg>');"></div>
+        
+        <!-- Main content of the hero section -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <!-- Company Logo & Name -->
+            <div class="flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary drop-shadow-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 12h5l-3 3h7l-3 3h6l-3 3h7l-3-3h3L12 2zM12 2L2 12h5l-3 3h7l-3 3h6l-3 3h7l-3-3h3L12 2z"></path>
+                </svg>
+                <h1 class="ml-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900">
+                    SparkyMinis
+                </h1>
+            </div>
+            
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                We are a media and technology company focused on creating simple, powerful, and offline-first tools to make your digital life easier.
+            </p>
+            <div class="mt-8">
+                <a href="#apps" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-primary hover:opacity-90 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                    Discover Our Apps
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- App Catalog Section -->
+    <main id="apps" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">LipiKit: The App Catalog</h2>
+            <p class="mt-2 text-lg text-gray-600">A collection of tools designed for simplicity and power, accessible anywhere.</p>
+        </div>
+
+        <div id="apps-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- App cards will be dynamically inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Contact & Footer Section -->
+    <footer class="bg-gray-900 text-white py-12 px-4 rounded-t-3xl">
+        <div class="max-w-7xl mx-auto text-center">
+            <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
+            <p class="text-gray-300">For inquiries, contact us at:</p>
+            <a href="mailto:connect@sparkyminis.com" class="mt-2 inline-block text-primary font-medium hover:underline">connect@sparkyminis.com</a>
+            
+            <!-- External site links -->
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 mt-6">
+                <a href="https://priyankadatar.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">Founder's Desk</a>
+                <a href="https://lipikit.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">LipiKit Apps</a>
+            </div>
+
+            <p class="mt-6 text-sm text-gray-500">&copy; <span id="current-year"></span> SparkyMinis Media-Tech LLP. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data for the apps remains the same
+        const apps = [
+            {
+                name: 'Trip Tracker',
+                description: 'Effortlessly track trip expenses, manage currency conversions, and create summary reports, even offline.',
+                link: 'https://trip.lipikit.com'
+            },
+            {
+                name: 'Da Vinci Resolve - Shortcuts',
+                description: 'A quick reference guide for DaVinci Resolve (v18/19+) keyboard shortcuts, designed for a second screen.',
+                link: 'https://davinci.lipikit.com'
+            },
+            {
+                name: 'Employee Onboarding Portal',
+                description: 'A dynamic and consistent guide for new hires, covering everything from paperwork to company culture, designed for a smooth and effective start.',
+                link: '#',
+                comingSoon: true
+            },
+            {
+                name: 'Design Asset Library',
+                description: 'Organize, tag, and manage all your creative assets, from icons and fonts to templates, ensuring seamless collaboration and version control.',
+                link: '#',
+                comingSoon: true
+            },
+            {
+                name: 'FAQ Chatbot',
+                description: 'An intelligent chatbot that instantly answers customer questions, reducing support load and providing 24/7 assistance for small businesses.',
+                link: '#',
+                comingSoon: true
+            },
+            {
+                name: 'Color Palette Generator',
+                description: 'Visually create and save perfect color schemes for your design projects, with tools for harmony, contrast, and accessibility.',
+                link: '#',
+                comingSoon: true
+            },
+            {
+                name: 'And Many More...',
+                description: 'We are constantly working on new tools to make your digital life easier. Stay tuned for exciting new app releases coming soon!',
+                link: '#',
+                comingSoon: true
+            }
+        ];
+
+        // Get the container where the cards will be placed
+        const appsContainer = document.getElementById('apps-container');
+
+        // Function to create a single app card element
+        function createAppCard(app) {
+            const buttonText = app.comingSoon ? 'Coming Soon' : 'Launch App';
+            const buttonClass = app.comingSoon ? 'bg-gray-200 text-gray-500 cursor-not-allowed' : 'bg-primary text-white hover:opacity-90 transition-colors';
+            const buttonLink = app.comingSoon ? '#' : app.link;
+
+            const appCard = document.createElement('div');
+            appCard.className = 'bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex flex-col items-start';
+
+            appCard.innerHTML = `
+                <div class="flex items-center justify-center bg-primary-light rounded-full w-16 h-16 mb-4 ring-2 ring-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-primary">
+                        <!-- Generic icon placeholder -->
+                        <path d="M4 14.5V20a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5.5M15.5 10l-3.5 3.5L8.5 10M12 13.5V2"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">${app.name}</h3>
+                <p class="text-sm text-gray-500 mb-6 flex-grow">${app.description}</p>
+                <a href="${buttonLink}" class="inline-flex justify-center items-center rounded-full px-6 py-3 font-medium ${buttonClass} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                    ${buttonText}
+                </a>
+            `;
+            return appCard;
+        }
+
+        // Function to render all app cards
+        function renderApps() {
+            appsContainer.innerHTML = ''; // Clear existing cards
+            apps.forEach(app => {
+                const card = createAppCard(app);
+                appsContainer.appendChild(card);
+            });
+        }
+
+        // Theme switching logic
+        function setTheme(theme) {
+            document.body.className = `bg-gray-50 text-gray-800 theme-${theme}`;
+            localStorage.setItem('theme', theme);
+        }
+
+        window.onload = function() {
+            // Set the current year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Render the apps on page load
+            renderApps();
+
+            // Check for and apply a saved theme from local storage
+            const savedTheme = localStorage.getItem('theme') || 'orange';
+            setTheme(savedTheme);
+
+            // Add event listeners for the theme buttons
+            document.getElementById('theme-purple').addEventListener('click', () => setTheme('purple'));
+            document.getElementById('theme-blue').addEventListener('click', () => setTheme('blue'));
+            document.getElementById('theme-orange').addEventListener('click', () => setTheme('orange'));
+        }
+    </script>
+</body>
+</html>
