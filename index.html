@@ -368,7 +368,7 @@
             <form id="contactForm">
                 <input type="text" name="entry.1734609227" id="name" placeholder="Your Name" required>
                 <input type="email" name="entry.1976770476" id="email" placeholder="Your Email" required>
-                <input type="hidden" name="entry.193589284" id="course" value="general">
+                <input type="hidden" name="entry.193589284" id="course" value="SparkyMinis general">
                 <div class="course-display">For: <span id="courseName">General Enquiry</span></div>
                 <textarea rows="5" name="entry.1538540993" id="message" placeholder="Your Message" required></textarea>
                 <button type="submit">Spark a Conversation</button>
@@ -417,7 +417,7 @@
             }
         }
         function setCourse(courseName) {
-            const displayName = courseName === 'general' ? 'General Enquiry' : courseName;
+            const displayName = courseName === 'SparkyMinis general' ? 'SparkyMinis General Enquiry' : courseName;
             document.getElementById('course').value = courseName;
             document.getElementById('courseName').textContent = displayName;
             smoothScrollTo('enquiryForm');
@@ -429,7 +429,7 @@
                     e.preventDefault();
                     const targetId = link.getAttribute('href').substring(1);
                     if (targetId === 'connect') {
-                        setCourse('general');
+                        setCourse('SparkyMinis general');
                     } else {
                         smoothScrollTo(targetId);
                     }
@@ -461,7 +461,7 @@
                         messageEl.textContent = 'Thank you! Your message has been sent. We\'ll get back to you soon. 🚀';
                         messageEl.className = 'form-message success';
                         form.reset();
-                        document.getElementById('course').value = 'general';
+                        document.getElementById('course').value = 'SparkyMinis general';
                         document.getElementById('courseName').textContent = 'General Enquiry';
                     } else {
                         throw new Error('Submission failed');
