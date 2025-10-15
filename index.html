@@ -6,7 +6,10 @@
     <title>SparkyMinis Media-Tech LLP: AI Media-Tech for Intentional Living</title>
     <style>
         * { box-sizing: border-box; }
-        body { font-family: 'Georgia', serif; margin: 0; padding: 0; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #2c3e50; line-height: 1.7; scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
+        body { font-family: 'Georgia', serif; margin: 0; padding: 0; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #2c3e50; line-height: 1.7; }
       
         /* Navbar */
         nav { position: sticky; top: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 0 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
@@ -288,56 +291,68 @@
             <a href="#academy" class="cta-primary">Dive into Academy</a>
         </div>
     </section>
-    <section id="academy" class="academy">
+
+    
+
+<section id="academy" class="academy">
         <h2>SparkyMinis Academy</h2>
-        <p class="intro">Unlock AI's potential through instructor-led trainings designed for real-world impact—each backed by batch-wide projects to apply skills in collaborative, hands-on environments. Whether you're a developer integrating ML into apps, a manager upskilling your team, or a founder embedding AI into your product for efficiency and delight.</p>
+        <p class="intro">Unlock AI's potential through intensive, instructor-led workshops designed for maximum impact—combining live learning, hands-on practice, and real-world project delivery. Build practical skills that transform how you work with AI.</p>
       
         <div class="academy-grid">
-            <div class="academy-section">
-                <h3>Upskilling Everyone: AI for Work</h3>
-                <p class="desc">For non-technical staff, managers, and PMs. Build confident AI usage with personalized workflows. Mastery Project: AI Mastery Playbook – your role-specific guide.</p>
+            <div class="academy-section academy-live">
+                <div class="live-badge">🔴 LIVE WORKSHOP</div>
+                <h3>Applied AI Mastery Workshop</h3>
+                <p class="desc">Intensive 3-4 day workshop for professionals, managers, and creators. Master AI through doing—build your AI Mastery Playbook, custom AI companion, and complete a real project while learning.</p>
+                <div class="session-info">
+                    <strong>Upcoming Sessions:</strong>
+                    <div class="batch-dates">
+                        <p>📅 Weekend Batch: Nov 22-24, 2025, 1 pm - 7 pm</p>
+                        <p>📅 Weekday Batch: Nov 25-28, 2025, 1 pm - 5 pm</p>
+                    </div>
+                </div>
                 <ul>
-                    <li>AI Essentials: Understand LLMs, limitations, and safe use</li>
-                    <li>Prompting Mastery: Create effective templates for daily tasks</li>
-                    <li>AI Tools & Workflows: Integrate ChatGPT, Claude for research and automation</li>
-                    <li>Responsible Use: Privacy, verification, and team guidelines</li>
+                    <li><strong>10 Integrated Segments:</strong> AI Fundamentals → Advanced Techniques → Responsible Implementation</li>
+                    <li><strong>Hands-On Learning:</strong> Every concept applied immediately through exercises and project work</li>
+                    <li><strong>Build Your Playbook:</strong> Create comprehensive personal AI reference system as you learn</li>
+                    <li><strong>Custom AI Companion:</strong> Configure personalized AI assistant for your recurring tasks</li>
+                    <li><strong>Real Project Delivery:</strong> Complete professional brand, career kit, knowledge system, or business launch materials</li>
+                    <li><strong>Coverage:</strong> Prompt engineering, 25+ tools, communication workflows, research & analysis, content creation, automation, RAG, agents, ethics & security</li>
                 </ul>
-                <a class="academy-cta" onclick="setCourse('AI for Work')">Enroll Now</a>
+                <div class="batch-buttons">
+                    <a href="https://rzp.io/rzp/dhanesh-ai-workshop-Nov25-wknd" target="_blank" class="academy-cta academy-cta-primary">Book Weekend Batch Seat (Nov 22-24)</a>
+                    <a href="https://rzp.io/rzp/dhanesh-ai-workshop-Nov25-wkdy" target="_blank" class="academy-cta academy-cta-primary">Book Weekday Batch Seat (Nov 25-28)</a>
+                </div>
+                <p class="payment-note">Secure payment via Razorpay • Seats limited to ensure personalized attention</p>
             </div>
-            <div class="academy-section">
-                <h3>Enabling Developers with AI: AI-Powered Development</h3>
-                <p class="desc">For developers boosting productivity. Achieve 2-3x faster coding with AI assistants. Mastery Project: AI-assisted automation tool.</p>
+            <div class="academy-section academy-coming">
+                <div class="coming-badge">COMING SOON</div>
+                <h3>Enterprise LLM Integration Masterclass</h3>
+                <p class="desc">For developers, architects, and product teams building AI-powered enterprise solutions. Ship production-ready LLM integrations with confidence.</p>
                 <ul>
-                    <li>LLMs for Developers: Tokens, context, and code limitations</li>
-                    <li>AI Coding Assistants: Copilot, Cursor for autocomplete and refactoring</li>
-                    <li>Prompt Engineering for Code: Generate tests, docs, and functions</li>
-                    <li>Debugging & Testing: Error fixes and unit test generation</li>
-                    <li>Scripting & Automation: Python, SQL, and workflow tools</li>
-                    <li>Development Workflow: Learning frameworks and documentation</li>
+                    <li><strong>LLM Fundamentals for Production:</strong> Model selection, API architecture, token economics, rate limits & quotas</li>
+                    <li><strong>Advanced Prompt Engineering:</strong> Structured outputs, function calling, chain-of-thought, few-shot learning, prompt optimization</li>
+                    <li><strong>Retrieval-Augmented Generation (RAG):</strong> Vector databases, embeddings, semantic search, chunking strategies, hybrid search</li>
+                    <li><strong>Integration Patterns:</strong> Streaming responses, error handling, fallback strategies, caching, multi-model orchestration</li>
+                    <li><strong>Enterprise Architecture:</strong> Microservices integration, API gateway patterns, authentication, monitoring & observability</li>
+                    <li><strong>Security & Compliance:</strong> Data privacy, PII handling, audit logging, content filtering, enterprise security protocols</li>
+                    <li><strong>Cost Optimization:</strong> Token management, caching strategies, model selection, batch processing, cost monitoring</li>
+                    <li><strong>Testing & Quality:</strong> LLM testing strategies, evaluation metrics, regression testing, performance benchmarking</li>
+                    <li><strong>Deployment & Scaling:</strong> Production deployment, load balancing, auto-scaling, disaster recovery</li>
+                    <li><strong>Real-World Project:</strong> Build and deploy production-ready AI feature with full monitoring and governance</li>
                 </ul>
-                <a class="academy-cta" onclick="setCourse('AI-Powered Development')">Enroll Now</a>
-            </div>
-            <div class="academy-section">
-                <h3>Integrating AI in Products: Building AI Products & AI Systems Masterclass</h3>
-                <p class="desc">For devs, PMs, and architects. Ship production-ready AI features. Mastery Project: Deployed AI system with governance.</p>
-                <ul>
-                    <li>Technical Foundations: LLM APIs, embeddings, and model selection</li>
-                    <li>API Integration & Prompt Engineering: Streaming, structured outputs</li>
-                    <li>Retrieval-Augmented Generation (RAG): Knowledge bases and semantic search</li>
-                    <li>Cost Management & UX: Optimization, caching, and user feedback</li>
-                    <li>Deployment & Iteration: Monitoring and scaling</li>
-                    <li>Advanced Topics: Agents, orchestration, security, multimodal AI</li>
-                </ul>
-                <a class="academy-cta" onclick="setCourse('Building AI Products & AI Systems Masterclass')">Enroll Now</a>
+                <a class="academy-cta academy-cta-secondary" onclick="setCourse('Enterprise LLM Integration Masterclass')">Notify Me When Available</a>
             </div>
         </div>
       
-        <p class="impact">"From solo creators turning travel tales into apps to teams scaling AI in enterprises—our instructor-led Academy bridges the gap, one collaborative project at a time."</p>
+        <p class="impact">"From solo creators mastering AI workflows to enterprise teams shipping production AI features—our hands-on workshops deliver immediate, practical skills through intensive learning-by-doing."</p>
       
         <div class="next-cta">
             <a href="#connect" class="cta-primary">Let's Connect</a>
         </div>
     </section>
+
+
+
     <section id="connect" class="connect">
         <h2>Connect & Collaborate</h2>
         <p class="intro">Ready to ignite your project? Whether it's a custom AI workshop, media partnership, or just sharing a recipe spark—reach out. We're here to co-create intentional impact.</p>
@@ -366,7 +381,7 @@
         <div class="enquiry-form" id="enquiryForm">
             <h3>Enquiry Form</h3>
             <form id="contactForm">
-                <div style="display:none;" aria-hidden="true">
+                <div style="position:absolute; left:-5000px;" aria-hidden="true">
                     <label for="url-trap">Leave this field blank</label>
                     <input type="text" name="honeypot-field" id="url-trap" tabindex="-1" autocomplete="off">
                 </div>
@@ -426,16 +441,14 @@
             document.getElementById('courseName').textContent = displayName;
             smoothScrollTo('enquiryForm');
         }
-        // Intercept clicks on internal anchor links for smooth scroll and course reset if to connect
+      
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('a[href^="#"]').forEach(link => {
                 link.addEventListener('click', (e) => {
-                    e.preventDefault();
                     const targetId = link.getAttribute('href').substring(1);
-                    if (targetId === 'connect') {
-                        setCourse('SparkyMinis general');
-                    } else {
-                        smoothScrollTo(targetId);
+                    if (targetId === 'connect' || targetId === 'enquiryForm') {
+                         e.preventDefault();
+                         setCourse(link.dataset.course || 'SparkyMinis general');
                     }
                 });
             });
@@ -443,23 +456,23 @@
             // Form submission handler
             const form = document.getElementById('contactForm');
             const messageEl = document.getElementById('form-message');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
 
-                // --- HONEYPOT CHECK ADDED HERE ---
+                // Honeypot check
                 const honeypotField = form.querySelector('#url-trap');
                 if (honeypotField && honeypotField.value.length > 0) {
-                    // Bot caught: Display success message to trick the bot, but DO NOT call fetch.
                     console.error("Submission blocked by honeypot.");
-                    messageEl.textContent = 'Done.';
+                    messageEl.textContent = 'Thank you! Your message has been sent.';
                     messageEl.className = 'form-message success';
                     messageEl.style.display = 'block';
-                    return; // Crucial: Exit the function to prevent form submission
+                    return; 
                 }
-                // --- END HONEYPOT CHECK ---
                 
-                const submitBtn = form.querySelector('button[type="submit"]');
-                const originalText = submitBtn.textContent;
+                // Set UI for submission
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Sending...';
                 messageEl.style.display = 'none';
@@ -468,26 +481,24 @@
                 const actionUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScP4IcUCtlgy2KNex6OsIgOnlE0pQ9orbgp9k55rsd9eZTmOQ/formResponse';
 
                 try {
-                    const response = await fetch(actionUrl, {
+                    // CORS mode is important for Google Forms
+                    await fetch(actionUrl, {
                         method: 'POST',
-                        body: formData
+                        body: formData,
+                        mode: 'no-cors' 
                     });
-                    const responseText = await response.text();
-
-                    if (responseText.includes('Your response has been recorded') || response.ok) {
-                        messageEl.textContent = 'Thank you! Your message has been sent. We\'ll get back to you soon. 🚀';
-                        messageEl.className = 'form-message success';
-                        form.reset();
-                        document.getElementById('course').value = 'SparkyMinis general';
-                        document.getElementById('courseName').textContent = 'General Enquiry';
-                    } else {
-                        throw new Error('Submission failed');
-                    }
-                } catch (error) {
-                    // Note: Your original code shows 'Done.' even on a caught error,
-                    // which is good practice to avoid giving spammers feedback.
-                    messageEl.textContent = 'Done.';
+                    
+                    // Since it's no-cors, we can't read the response. We assume success.
+                    messageEl.textContent = 'Thank you! Your message has been sent. We\'ll get back to you soon. 🚀';
                     messageEl.className = 'form-message success';
+                    form.reset();
+                    document.getElementById('course').value = 'SparkyMinis general';
+                    document.getElementById('courseName').textContent = 'General Enquiry';
+                    
+                } catch (error) {
+                    console.error('Form submission error:', error);
+                    messageEl.textContent = 'Oops! Something went wrong. Please try again.';
+                    messageEl.className = 'form-message error';
                 } finally {
                     messageEl.style.display = 'block';
                     submitBtn.disabled = false;
