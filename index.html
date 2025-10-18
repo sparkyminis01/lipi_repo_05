@@ -84,32 +84,169 @@
         /* Ecosystem */
         .ecosystem {
             padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            background: #fafafa;
             text-align: center;
-            background: rgba(255, 255, 255, 0.8);
         }
-        .ecosystem h2 { font-size: 2.8rem; margin-bottom: 20px; color: #2c3e50; font-weight: 300; }
-        .ecosystem .intro { font-size: 1.2rem; margin-bottom: 60px; color: #7f8c8d; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .ecosystem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-        .ecosystem-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: left; }
-        .ecosystem-card h3 { font-size: 1.6rem; margin: 0 0 15px; color: #e74c3c; }
-        .ecosystem-card ul { list-style: none; padding: 0; }
-        .ecosystem-card li { margin: 10px 0; padding: 10px; background: rgba(231, 76, 60, 0.05); border-radius: 8px; }
-        .ecosystem-card .cta-external { background: #e74c3c; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; display: inline-block; margin-top: 10px; transition: all 0.3s; }
-        .ecosystem-card .cta-external:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3); }
-        .embeds-placeholder { margin-top: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-        .embed-item { background: rgba(231, 76, 60, 0.05); padding: 10px; border-radius: 8px; font-size: 0.9rem; color: #7f8c8d; text-align: center; }
-        .synergy { margin: 40px 0; font-size: 1.1rem; color: #34495e; font-style: italic; }
-        .academy-ecosystem { grid-column: 1 / -1; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: left; }
-        .academy-ecosystem h3 { font-size: 1.6rem; margin: 0 0 15px; color: #e74c3c; }
-        .academy-ecosystem p { font-size: 1.1rem; margin-bottom: 20px; color: #34495e; }
-        .next-cta { margin-top: 40px; }
+        .ecosystem h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-weight: 300;
+        }
+        .ecosystem .intro {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #555;
+        }
+        .ecosystem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto 60px;
+        }
+        .ecosystem-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .ecosystem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #e74c3c, #3498db);
+        }
+        .ecosystem-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+        }
+        .ecosystem-card h3 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        .ecosystem-card .tagline {
+            color: #e74c3c;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .ecosystem-card p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .ecosystem-card h4 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin: 25px 0 10px;
+            font-weight: 400;
+        }
+        .ecosystem-card ul {
+            margin: 0 0 20px 20px;
+            padding: 0;
+            color: #666;
+            line-height: 1.6;
+        }
+        .ecosystem-card li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 15px;
+        }
+        .ecosystem-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .link-highlight {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px dotted #e74c3c;
+        }
+        .link-highlight:hover {
+            border-bottom-style: solid;
+        }
+        .media-previews {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .preview-box {
+            flex: 1;
+            min-width: 120px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 15px;
+            text-align: center;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            color: #666;
+            border: 1px solid #dee2e6;
+        }
+        .synergy {
+            max-width: 1000px;
+            margin: 60px auto 40px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            font-style: italic;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #e74c3c;
+        }
+        .next-cta {
+            margin-top: 40px;
+        }
+        a.cta-external {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 2px solid #e74c3c;
+            border-radius: 30px;
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+        a.cta-external:hover {
+            background-color: #e74c3c;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(231, 76, 60, 0.25);
+        }
         @media (max-width: 768px) {
-            .ecosystem-grid { grid-template-columns: 1fr; gap: 20px; }
-            .ecosystem { padding: 40px 20px; }
-            .ecosystem h2 { font-size: 2.2rem; }
-            .embeds-placeholder { flex-direction: column; align-items: center; }
+            .ecosystem {
+                padding: 60px 20px;
+            }
+            .ecosystem h2 {
+                font-size: 2.2rem;
+            }
+            .ecosystem-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                max-width: 100%;
+            }
+            .ecosystem-card {
+                padding: 30px;
+            }
+            .media-previews {
+                flex-direction: column;
+            }
         }
         /* Academy */
         .academy {
@@ -186,6 +323,7 @@
         @media (max-width: 768px) {
             .footer-content { flex-direction: column; align-items: center; }
         }
+
     </style>
 </head>
 <body>
@@ -248,53 +386,106 @@
         </div>
     </section>
   
-    <section id="ecosystem" class="ecosystem">
-        <h2>Our Ecosystem</h2>
-        <p class="intro">Evolving into a seamless media-tech world: AI-powered apps for everyday wins, vibrant channels sharing real-life sparks—interconnected to turn analytics into adventures, meals into magic, and insights into action.</p>
-      
-        <div class="ecosystem-grid">
-            <div class="ecosystem-card">
-                <h3>Tech Sparks</h3>
-                <ul>
-                    <li><strong>Trips Tracker</strong>: Multicurrency, multicountry travel expense tracking with document management, checklists, and itinerary builders—your global companion.</li>
-                    <li><strong>Meal Planner</strong>: Healthy recipe optimizer, curating personalized plans from fitness goals to family feasts.</li>
-                    <li><strong>Student Hub</strong>: Core tool for hands-on trainings (via LipiKit), blending learning with practical AI exercises.</li>
-                    <li><strong>Coming Soon</strong>: Exercise trackers and smart calendars—more sparks for wellness and organization.</li>
-                </ul>
-                <a href="https://lipikit.com" target="_blank" class="cta-external">Explore LipiKit</a>
-            </div>
-            <div class="ecosystem-card">
-                <h3>Media Sparks</h3>
-                <ul>
-                    <li><strong>Fitness YouTube</strong>: Workouts, mindset tips, and data-driven routines to fuel your flow.</li>
-                    <li><strong>Travel Instagram (@thesparkytrips)</strong>: Family adventures with itineraries, tips for kids' trips, and inspiration (12.3k followers, 245+ posts on Bali getaways, European roads, sustainable escapes).</li>
-                    <li><strong>Founder's Personal IG</strong>: Recipes, health hacks, and fitness stories—raw, relatable wellness in motion.</li>
-                </ul>
-                <div class="embeds-placeholder">
-                    <div class="embed-item">YouTube Video Embed</div>
-                    <div class="embed-item">Instagram Reel from @thesparkytrips</div>
-                    <div class="embed-item">Podcast Snippet</div>
-                </div>
-            </div>
-        </div>
-      
-        <div class="ecosystem-grid">
-            <div class="academy-ecosystem">
-                <h3>Academy: Democratizing AI for All</h3>
-                <p>Our bigger goal: Enabling professionals, managers, and founders in any field to harness AI for upskilling and closing skill gaps—equipping coders and developers to integrate AI into their work, while guiding companies to embed AI seamlessly into products and workflows for scalable efficiency.</p>
-            </div>
-        </div>
-      
-        <p class="synergy">Synergy in motion: Travel IG itineraries spark the Trips app; recipe reels optimize Meal Planner—your media fuels our tech, our apps amplify your stories, and Academy equips you to create more.</p>
-      
-        <div class="next-cta">
-            <a href="#academy" class="cta-primary">Dive into Academy</a>
-        </div>
-    </section>
+<!-- ============================= -->
+<!--   ECOSYSTEM SECTION STARTS   -->
+<!-- ============================= -->
+<section id="ecosystem" class="ecosystem">
+  <h2>Our Integrated Ecosystem</h2>
+  <p class="intro">
+    SparkyMinis weaves together AI innovation, creative media, and scalable infrastructure to empower creators, professionals, and businesses. From life-enriching apps to dynamic content studios, our ecosystem drives intentional growth through seamless technology and storytelling.
+  </p>
 
-    
+  <div class="ecosystem-grid">
 
-<section id="academy" class="academy">
+    <!-- =================== -->
+    <!--  TECH DIVISION CARD -->
+    <!-- =================== -->
+    <div class="ecosystem-card">
+      <h3>AI & Technology Division</h3>
+      <p class="tagline">Intelligent apps and platforms that simplify and elevate everyday workflows.</p>
+      <p>
+        We design AI-infused applications tailored for travelers, content creators, trainers, designers, and editors—delivering tools that foster creativity, efficiency, and personal enrichment. AI powers every layer, from development to user experience, ensuring intuitive, adaptive solutions.
+      </p>
+
+      <h4>Core Offerings</h4>
+      <ul>
+        <li>Free and subscription-based apps via <a href="https://lipikit.com" target="_blank" class="link-highlight">LipiKit.com</a>: Personalized travel planners, content editing suites, fitness trackers, and design prototypes—all in active development to spark joy in daily routines.</li>
+        <li>AI-driven business tools for HR teams and startups: Automated recruitment platforms, workflow optimizers, and analytics dashboards, primarily subscription-based for seamless scaling.</li>
+      </ul>
+
+      <h4>Secure Infrastructure</h4>
+      <ul>
+        <li>Licensed CMS with cutting-edge security: Powered by Cloudflare, Netlify, Vercel, Hugo, and custom integrations for end-to-end management—ideal for businesses and creators seeking robust, hosted solutions.</li>
+        <li>Managed hosting services: Full-spectrum deployment, optimization, and maintenance to keep your digital presence agile and secure.</li>
+      </ul>
+
+      <a href="https://lipikit.com" target="_blank" class="cta-external">Discover LipiKit</a>
+    </div>
+
+    <!-- =================== -->
+    <!--  MEDIA DIVISION CARD -->
+    <!-- =================== -->
+    <div class="ecosystem-card">
+      <h3>Media & Content Studio</h3>
+      <p class="tagline">Vibrant storytelling that inspires action and connection.</p>
+      <p>
+        Our studio crafts compelling narratives across platforms, blending AI-enhanced production with human insight to engage audiences in fitness, travel, and lifestyle realms. We amplify voices through strategic content and brand elevation.
+      </p>
+
+      <h4>Production Capabilities</h4>
+      <ul>
+        <li>State-of-the-art YouTube studio: Equipped with Blackmagic cameras, Sony lenses, and premium accessories for professional-grade shoots, supported by AI automation for efficient editing and distribution.</li>
+        <li>Specialized channels: Fitness and health-focused YouTube series delivering actionable wellness routines; travel-inspired Instagram feeds capturing authentic adventures—with expansions into design and creator spotlights on the horizon.</li>
+      </ul>
+
+      <h4>Brand & Growth Services</h4>
+      <ul>
+        <li>Personal brand management: Tailored strategies for Instagram and YouTube, leveraging analytics and AI to grow engagement and monetization for creators and professionals.</li>
+        <li>Expert team support: Sophisticated video editors and marketing specialists who refine content for maximum impact, from script to social rollout.</li>
+      </ul>
+
+      <div class="media-previews">
+        <div class="preview-box">🎥 Blackmagic Studio Highlights</div>
+        <div class="preview-box">🌍 @SparkyTravels on Instagram</div>
+        <div class="preview-box">💪 Fitness Channel Previews</div>
+        <div class="preview-box">📈 Brand Growth Analytics</div>
+      </div>
+    </div>
+
+    <!-- ===================== -->
+    <!--  ACADEMY / BRIDGE CARD -->
+    <!-- ===================== -->
+    <div class="ecosystem-card">
+      <h3>The Bridge: SparkyMinis Academy</h3>
+      <p class="tagline">Empowering skills at the nexus of tech and creativity.</p>
+      <p>
+        Bridging our tech and media worlds, the Academy offers targeted programs in AI application, content mastery, and digital strategy—equipping individuals and teams to harness our ecosystem's full potential for innovative outcomes.
+      </p>
+      <p>
+        From hands-on app prototyping to media production workflows, learners gain direct access to our tools and expertise, fostering a community of forward-thinking creators and leaders.
+      </p>
+
+      <a href="#academy" class="cta-external">Explore Academy Programs</a>
+    </div>
+
+  </div>
+
+  <!-- ===================== -->
+  <!--  SYNERGY & CTA FOOTER -->
+  <!-- ===================== -->
+  <p class="synergy">
+    <strong>Ecosystem Synergy:</strong> AI innovations from our tech labs inspire media narratives that showcase real-user stories, while studio productions test and refine app features in live scenarios. The Academy closes the loop, training tomorrow's innovators to expand this vibrant network—creating a self-sustaining cycle of enrichment and evolution.
+  </p>
+
+  <div class="next-cta">
+    <a href="#academy" class="cta-primary">Dive into the Academy</a>
+  </div>
+</section>
+<!-- =========================== -->
+<!--   END OF ECOSYSTEM SECTION  -->
+<!-- =========================== -->
+
+    <section id="academy" class="academy">
         <h2>SparkyMinis Academy</h2>
         <p class="intro">Unlock AI's potential through intensive, instructor-led workshops designed for maximum impact—combining live learning, hands-on practice, and real-world project delivery. Build practical skills that transform how you work with AI.</p>
       
@@ -302,7 +493,7 @@
             <div class="academy-section academy-live">
                 <div class="live-badge">🔴 LIVE WORKSHOP</div>
                 <h3>Applied AI Mastery Workshop</h3>
-                <p class="desc">Intensive 3-4 day workshop for professionals, managers, and creators. Master AI through doing—build your AI Mastery Playbook, custom AI companion, and complete a real project while learning.</p>
+                <p class="desc">Intensive 2 days weekend workshop for working professionals, managers, and creators. Master AI through doing—build your AI Mastery Playbook, custom AI companion, and complete a real project while learning.</p>
                 <div class="session-info">
 
             <!-- Trainer credit block -->
@@ -316,8 +507,8 @@
 
                     <strong>Upcoming Sessions:</strong>
                     <div class="batch-dates">
-                        <p>📅 Weekend Batch: Nov 22-24, 2025, 1 pm - 7 pm</p>
-                        <p>📅 Weekday Batch: Nov 25-28, 2025, 1 pm - 5 pm</p>
+                        <p>📅 Nov Weekend Batch #1: Nov 22-23, 2025, 2 pm - 7 pm</p>
+                        <p>📅 Nov Weekend Batch #2: Nov 29-30, 2025, 2 pm - 5 pm</p>
                     </div>
                 </div>
                 <ul>
@@ -329,8 +520,8 @@
                     <li><strong>Coverage:</strong> Prompt engineering, 25+ tools, communication workflows, research & analysis, content creation, automation, RAG, agents, ethics & security</li>
                 </ul>
                 <div class="batch-buttons">
-                    <a href="https://rzp.io/rzp/dhanesh-ai-workshop-Nov25-wknd" target="_blank" class="academy-cta academy-cta-primary">Book Weekend Batch Seat (Nov 22-24)</a>
-                    <a href="https://rzp.io/rzp/dhanesh-ai-workshop-Nov25-wkdy" target="_blank" class="academy-cta academy-cta-primary">Book Weekday Batch Seat (Nov 25-28)</a>
+                    <a href="https://rzp.io/rzp/dhanesh-ai-workshop-Nov25-wkb1" target="_blank" class="academy-cta academy-cta-primary">Book Seat in Batch # 1 (Nov 22-2)</a>
+                    <a href="https://rzp.io/rzp/dhanesh-ai-workshop-Nov25-wkb2" target="_blank" class="academy-cta academy-cta-primary">Book Seat in Batch # 2 (Nov 29-30)</a>
                 </div>
                 <p class="payment-note">Secure payment via Razorpay • Seats limited to ensure personalized attention</p>
             </div>
@@ -392,7 +583,9 @@
             <div class="connect-card">
                 <h3>General Sparks</h3>
                 <p>Ideas, feedback, or just saying hi—your voice fuels our journey.</p>
-                <a href="https://www.linkedin.com/company/sparkyminis-media-tech/" target="_blank">LinkedIn</a><br>
+                <a href="linkedin.com/company/sparkyminis/" target="_blank">LinkedIn</a><br>
+                <a href="https://instagram.com/madebyPriyanka" target="_blank">Our Co-founder</a><br>
+                <a href="https://www.linkedin.com/in/dhanesharadhye/" target="_blank">Our Advisor</a><br>
                 <!--a href="tel:+1234567890">+1 (234) 567-890</a-->
             </div>
         </div>
@@ -414,36 +607,34 @@
             <div id="form-message" class="form-message"></div>
         </div>
     </section>
+
+
 <footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h4>SparkyMinis Media-Tech LLP</h4>
-            <p>Ethical AI Media-Tech for Nourished Lives</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SparkyMinis</h4>
+                <p>AI Media-Tech for Intentional Living</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#spark">Home</a></li>
+                    <li><a href="#ecosystem">Ecosystem</a></li>
+                    <li><a href="#academy">Academy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="https://linkedin.com/company/sparkyminis">LinkedIn</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="#spark">The Spark</a></li>
-                <li><a href="#vision">Vision</a></li>
-                <li><a href="#ecosystem">Ecosystem</a></li>
-                <li><a href="#academy">Academy</a></li>
-                <li><a href="#connect">Connect</a></li>
-            </ul>
+        <div class="footer-bottom">
+            &copy; 2025 SparkyMinis Media-Tech LLP. All rights reserved.
         </div>
-        <div class="footer-section">
-            <h4>Stay Sparked</h4>
-            <ul>
-                <li><a href="https://www.instagram.com/thesparkytrips" target="_blank">@thesparkytrips</a></li>
-                <li><a href="https://lipikit.com" target="_blank">LipiKit</a></li>
-                <li><a href="https://madebypriyanka.com" target="_blank">Founder's Page</a></li>
-                <li><a href="mailto:connect@sparkyminis.com">connect@sparkyminis.com</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        &copy; 2025 SparkyMinis Media-Tech LLP. All rights reserved. | Built with ❤️ for intentional living.
-    </div>
-</footer>
+    </footer>
+
     <script>
         function toggleNav() {
             document.querySelector('.nav-links').classList.toggle('active');
