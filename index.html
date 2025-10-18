@@ -14,7 +14,8 @@
         /* Navbar */
         nav { position: sticky; top: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 0 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 60px; }
-        .logo { font-size: 1.4rem; font-weight: 300; color: #e74c3c; text-decoration: none; }
+        .logo { font-size: 1.4rem; font-weight: 300; color: #e74c3c; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .logo img { height: 40px; width: auto; vertical-align: middle; }
         .nav-links { display: flex; list-style: none; margin: 0; padding: 0; gap: 30px; }
         .nav-links a { color: #7f8c8d; text-decoration: none; font-weight: 400; transition: color 0.3s; position: relative; }
         .nav-links a:hover, .nav-links a.active { color: #e74c3c; }
@@ -29,6 +30,8 @@
             .nav-links.active { display: flex; }
             .hamburger { display: flex; }
             .progress-dots { display: none; }
+            .logo img { height: 35px; }
+            .logo { font-size: 1.2rem; }
         }
       
         /* Spark (Hero) */
@@ -327,30 +330,33 @@
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="#spark" class="logo">SparkyMinis</a>
-            <ul class="nav-links">
-                <li><a href="#spark" class="nav-link">The Spark</a></li>
-                <li><a href="#vision" class="nav-link">Vision</a></li>
-                <li><a href="#ecosystem" class="nav-link">Ecosystem</a></li>
-                <li><a href="#academy" class="nav-link">Academy</a></li>
-                <li><a href="#connect" class="nav-link">Connect</a></li>
-            </ul>
-            <div class="hamburger" onclick="toggleNav()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+   <nav>
+    <div class="nav-container">
+        <a href="#spark" class="logo">
+            <img src="logo.png" alt="SparkyMinis Logo"> <!-- Replace 'logo.png' with the path to your attached logo file -->
+            SparkyMinis
+        </a>
+        <ul class="nav-links">
+            <li><a href="#spark" class="nav-link">The Spark</a></li>
+            <li><a href="#vision" class="nav-link">Vision</a></li>
+            <li><a href="#ecosystem" class="nav-link">Ecosystem</a></li>
+            <li><a href="#academy" class="nav-link">Academy</a></li>
+            <li><a href="#connect" class="nav-link">Connect</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="progress-dots">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </nav>
+    </div>
+    <div class="progress-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</nav>
   
     <section id="spark" class="spark">
         <div class="spark-content">
