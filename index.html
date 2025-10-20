@@ -3,6 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- UPDATED: SEO Enhancements -->
+    <meta name="description" content="Ethical AI media-tech for intentional living: Personalized apps, vibrant content, and hands-on workshops blending wellness, travel, and creativity.">
+    <meta name="keywords" content="ethical AI, media-tech, AI workshops, travel planners, fitness apps, content creation">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sparkyminis.com/">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SparkyMinis: Ethical AI Media-Tech for Nourished Lives">
+    <meta property="og:description" content="Empower intentional living with AI-powered tools, vibrant content, and transformative workshops.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://sparkyminis.com/">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="SparkyMinis: Ethical AI Media-Tech for Nourished Lives">
+    <meta property="twitter:description" content="Empower intentional living with AI-powered tools, vibrant content, and transformative workshops.">
+    <meta property="twitter:image" content="logo.png">
+<!-- UPDATED: Thunderbolt Favicon (Embedded SVG for simplicity) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23e74c3c'>⚡</text></svg>">
+    <!-- Schema.org JSON-LD for Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SparkyMinis Media-Tech LLP",
+      "url": "https://sparkyminis.com",
+      "logo": "logo.png",
+      "description": "Ethical AI media-tech for intentional living",
+      "email": "connect@sparkyminis.com",
+      "sameAs": ["https://linkedin.com/company/sparkyminis", "https://www.instagram.com/thesparkytrips"]
+    }
+    </script>
     <title>SparkyMinis Media-Tech LLP: AI Media-Tech for Intentional Living</title>
     <style>
         * { box-sizing: border-box; }
@@ -327,6 +358,111 @@
             .footer-content { flex-direction: column; align-items: center; }
         }
 
+        /* FAQ Modal Styles */
+        .faq-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+        .faq-modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            animation: fadeIn 0.3s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .faq-modal-header {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 20px;
+            border-radius: 15px 15px 0 0;
+            text-align: center;
+        }
+        .faq-modal-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        .faq-modal-body {
+            padding: 30px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 15px;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .faq-answer {
+            color: #555;
+            line-height: 1.6;
+        }
+        .faq-close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            transition: opacity 0.3s;
+        }
+        .faq-close:hover {
+            opacity: 0.7;
+        }
+        .faq-trigger {
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+        }
+        .faq-trigger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+        }
+        @media (max-width: 768px) {
+            .faq-modal-content {
+                width: 95%;
+                margin: 10% auto;
+                max-height: 85vh;
+            }
+            .faq-modal-body {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -415,7 +551,7 @@
 
       <h4>Core Offerings</h4>
       <ul>
-        <li>Free and subscription-based apps via <a href="https://lipikit.com" target="_blank" class="link-highlight">LipiKit.com</a>: Personalized travel planners, content editing suites, fitness trackers, and design prototypes—all in active development to spark joy in daily routines.</li>
+        <li>Free and subscription-based apps via <a href="https://lipikit.com" target="_blank" rel="noopener noreferrer" class="link-highlight">LipiKit.com</a>: Personalized travel planners, content editing suites, fitness trackers, and design prototypes—all in active development to spark joy in daily routines.</li>
         <li>AI-driven business tools for HR teams and startups: Automated recruitment platforms, workflow optimizers, and analytics dashboards, primarily subscription-based for seamless scaling.</li>
       </ul>
 
@@ -425,7 +561,7 @@
         <li>Managed hosting services: Full-spectrum deployment, optimization, and maintenance to keep your digital presence agile and secure.</li>
       </ul>
 
-      <a href="https://lipikit.com" target="_blank" class="cta-external">Discover LipiKit</a>
+      <a href="https://lipikit.com" target="_blank" rel="noopener noreferrer" class="cta-external">Discover LipiKit</a>
     </div>
 
     <!-- =================== -->
@@ -494,6 +630,11 @@
     <section id="academy" class="academy">
         <h2>SparkyMinis Academy</h2>
         <p class="intro">Unlock AI's potential through intensive, instructor-led workshops designed for maximum impact—combining live learning, hands-on practice, and real-world project delivery. Build practical skills that transform how you work with AI.</p>
+
+        <!-- FAQ Trigger Button -->
+        <div style="text-align: center; margin-bottom: 40px;">
+            <button class="faq-trigger" onclick="openFAQModal()">Workshop FAQs</button>
+        </div>
       
         <div class="academy-grid">
             <div class="academy-section academy-live">
@@ -505,7 +646,7 @@
             <!-- Trainer credit block -->
             <div class="trainer-info" style="margin: 10px 0 20px; font-size: 0.95rem; color: #555; text-align: center;">
                 <strong>Trainer:</strong> 
-                <a href="https://www.linkedin.com/in/dhanesharadhye/" target="_blank" style="color: #e74c3c; text-decoration: none; font-weight: 600;">
+                <a href="https://www.linkedin.com/in/dhanesharadhye/" target="_blank" rel="noopener noreferrer" style="color: #e74c3c; text-decoration: none; font-weight: 600;">
                     Dhanesh Aradhye
                 </a> 
                 — Head of AI, Data & Product at SparkyMinis Media-Tech
@@ -526,8 +667,8 @@
                     <li><strong>Coverage:</strong> Prompt engineering, 25+ tools, communication workflows, research & analysis, content creation, automation, RAG, agents, ethics & security</li>
                 </ul>
                 <div class="batch-buttons">
-                    <a href="https://rzp.io/rzp/dhanesh-ai-workshop-Nov25-wkb1" target="_blank" class="academy-cta academy-cta-primary">Book Seat in Batch # 1 (Nov 22-2)</a>
-                    <a href="https://rzp.io/rzp/dhanesh-ai-workshop-Nov25-wkb2" target="_blank" class="academy-cta academy-cta-primary">Book Seat in Batch # 2 (Nov 29-30)</a>
+                    <a href="https://rzp.io/rzp/dhanesh-ai-workshop-Nov25-wkb1" target="_blank" rel="noopener noreferrer" class="academy-cta academy-cta-primary">Book Seat in Batch # 1 (Nov 22-23)</a>
+                    <a href="https://rzp.io/rzp/dhanesh-ai-workshop-Nov25-wkb2" target="_blank" rel="noopener noreferrer" class="academy-cta academy-cta-primary">Book Seat in Batch # 2 (Nov 29-30)</a>
                 </div>
                 <p class="payment-note">Secure payment via Razorpay • Seats limited to ensure personalized attention</p>
             </div>
@@ -539,7 +680,7 @@
             <!-- Trainer credit block -->
             <div class="trainer-info" style="margin: 10px 0 20px; font-size: 0.95rem; color: #555; text-align: center;">
                 <strong>Trainer:</strong> 
-                <a href="https://www.linkedin.com/in/dhanesharadhye/" target="_blank" style="color: #e74c3c; text-decoration: none; font-weight: 600;">
+                <a href="https://www.linkedin.com/in/dhanesharadhye/" target="_blank" rel="noopener noreferrer" style="color: #e74c3c; text-decoration: none; font-weight: 600;">
                     Dhanesh Aradhye
                 </a> 
                 — Head of AI, Data & Product at SparkyMinis Media-Tech
@@ -567,6 +708,66 @@
         </div>
     </section>
 
+<!-- FAQ Modal -->
+<div id="faqModal" class="faq-modal">
+    <div class="faq-modal-content">
+        <div class="faq-modal-header">
+            <span class="faq-close" onclick="closeFAQModal()">&times;</span>
+            <h3>Workshop FAQs</h3>
+        </div>
+        <div class="faq-modal-body">
+            <div class="faq-item">
+                <div class="faq-question">Is this workshop live or recorded?</div>
+                <div class="faq-answer">Live, online, and interactive. Real-time learning, hands-on practice, immediate Q&A.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do I need technical background?</div>
+                <div class="faq-answer">No. Workshop is designed for all backgrounds. If you can use web applications, you can master this.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What tools do I need?</div>
+                <div class="faq-answer">Computer, internet, and access to AI platforms (ChatGPT, Claude, or Gemini - free versions work).</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How long is the workshop, and what's the schedule like?</div>
+                <div class="faq-answer">Each batch is 2 intensive weekend days (usual: 5 hours/day, 2-7 PM IST). Flexible timing based on batch preference—we'll confirm yours.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What platform do we use, and what if I have tech issues?</div>
+                <div class="faq-answer">We use MS Teams for easy video and screen-sharing (free app, no downloads needed). Link sent 24 hours prior. If issues arise, join our live chat support—your success comes first.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What will I actually learn and achieve?</div>
+                <div class="faq-answer">You'll build a custom AI Playbook, configure your personal AI companion, and deliver a real project (e.g., career kit or business tool). Walk away with prompt engineering mastery, 25+ tool integrations, and a certificate to showcase on LinkedIn.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I get corporate invoice for my company?</div>
+                <div class="faq-answer">Yes. Contact connect@sparkyminis.com for corporate billing.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What's included in group discount?</div>
+                <div class="faq-answer">Same comprehensive workshop, community access, certificates, and gift voucher eligibility. Just reduced per-person pricing for groups of 3+.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Is there support after the workshop ends?</div>
+                <div class="faq-answer">Absolutely—lifetime access to our private community for ongoing Q&A, templates, and peer networking. Plus, 30 days of direct email support from our AI experts.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How do I know this is worth it for my career/background?</div>
+                <div class="faq-answer">No prior AI experience needed—backed by real-world tools and our Head of Data, AI & Product's 18+ years of expertise in data and AI.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What if I paid to book a seat and now I cannot attend the session?</div>
+                <div class="faq-answer">Unfortunately, we do not offer refunds. You can however request change of batch by sending an email to connect@sparkyminis.com.</div>
+            </div>
+            <div class="faq-item" style="border-bottom: none; font-style: italic; color: #7f8c8d;">
+                <div class="faq-question">Got more questions?</div>
+                <div class="faq-answer">Email connect@sparkyminis.com—we reply within 1 working day!</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
     <section id="connect" class="connect">
@@ -577,21 +778,21 @@
             <div class="connect-card">
                 <h3>Media & Partnerships</h3>
                 <p>Collaborate on content: Guest spots on our channels, co-branded travels, or recipe features.</p>
-                <a href="https://www.instagram.com/thesparkytrips" target="_blank">Follow @thesparkytrips</a><br>
+                <a href="https://www.instagram.com/thesparkytrips" target="_blank" rel="noopener noreferrer">Follow @thesparkytrips</a><br>
                 <a href="mailto:connect@sparkyminis.com">connect@sparkyminis.com</a>
             </div>
             <div class="connect-card">
                 <h3>Tech & Academy Inquiries</h3>
                 <p>For LipiKit products, workshop bookings, or custom trainings.</p>
-                <a href="https://lipikit.com" target="_blank">lipikit.com</a><br>
+                <a href="https://lipikit.com" target="_blank" rel="noopener noreferrer">lipikit.com</a><br>
                 <a href="mailto:connect@sparkyminis.com">connect@sparkyminis.com</a>
             </div>
             <div class="connect-card">
                 <h3>General Sparks</h3>
                 <p>Ideas, feedback, or just saying hi—your voice fuels our journey.</p>
-                <a href="linkedin.com/company/sparkyminis/" target="_blank">LinkedIn</a><br>
-                <a href="https://instagram.com/madebyPriyanka" target="_blank">Our Co-founder</a><br>
-                <a href="https://www.linkedin.com/in/dhanesharadhye/" target="_blank">Our Advisor</a><br>
+                <a href="https://linkedin.com/company/sparkyminis/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br>
+                <a href="https://instagram.com/madebyPriyanka" target="_blank" rel="noopener noreferrer">Our Co-founder</a><br>
+                <a href="https://www.linkedin.com/in/dhanesharadhye/" target="_blank" rel="noopener noreferrer">Our Advisor</a><br>
                 <!--a href="tel:+1234567890">+1 (234) 567-890</a-->
             </div>
         </div>
@@ -614,7 +815,6 @@
         </div>
     </section>
 
-
 <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -632,12 +832,19 @@
             <div class="footer-section">
                 <h4>Follow Us</h4>
                 <ul>
-                    <li><a href="https://linkedin.com/company/sparkyminis">LinkedIn</a></li>
+                    <li><a href="https://linkedin.com/company/sparkyminis" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                 </ul>
             </div>
+            <!--div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                </ul>
+            </div-->
         </div>
         <div class="footer-bottom">
-            &copy; 2025 SparkyMinis Media-Tech LLP. All rights reserved.
+            &copy; <span id="year"></span> SparkyMinis Media-Tech LLP. All rights reserved. <!-- UPDATED: Dynamic year -->
         </div>
     </footer>
 
@@ -656,6 +863,20 @@
             document.getElementById('course').value = courseName;
             document.getElementById('courseName').textContent = displayName;
             smoothScrollTo('enquiryForm');
+        }
+
+        // FAQ Modal Functions
+        function openFAQModal() {
+            document.getElementById('faqModal').style.display = 'block';
+        }
+        function closeFAQModal() {
+            document.getElementById('faqModal').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('faqModal');
+            if (event.target === modal) {
+                closeFAQModal();
+            }
         }
       
         document.addEventListener('DOMContentLoaded', function() {
