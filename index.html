@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -463,6 +464,238 @@
                 padding: 20px;
             }
         }
+
+        /* Course Timeline Modal Styles */
+        .timeline-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+        .timeline-modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            animation: fadeIn 0.3s ease-out;
+        }
+        .timeline-modal-header {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 20px;
+            border-radius: 15px 15px 0 0;
+            text-align: center;
+            position: relative;
+        }
+        .timeline-modal-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        .timeline-modal-body {
+            padding: 30px;
+        }
+        .timeline-close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            transition: opacity 0.3s;
+        }
+        .timeline-close:hover {
+            opacity: 0.7;
+        }
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #e74c3c;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            margin-left: -2px;
+        }
+        .day {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .day::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 11px;
+            background-color: #e74c3c;
+            border: 4px solid #f8f9fa;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .day-content {
+            margin-left: 60px;
+            padding: 20px 25px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .day-header {
+            color: #2c3e50;
+            margin-top: 0;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+        .time-slot {
+            display: flex;
+            margin: 12px 0;
+            padding: 12px 15px;
+            border-left: 3px solid #e74c3c;
+            background-color: #fff;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+        .time-slot:hover {
+            background-color: #f8f9fa;
+        }
+        .time-slot.break {
+            background-color: #f9f9f9;
+            border-left-color: #bdc3c7;
+        }
+        .time-content {
+            flex-grow: 1;
+        }
+        .time {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1.05em;
+        }
+        .time-slot.break .time {
+            color: #7f8c8d;
+        }
+        .time-slot p {
+            margin: 5px 0 0 0;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        .time-indicator {
+            background: #f5f5f5;
+            color: #444;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin-left: 15px;
+            white-space: nowrap;
+            border: 1px solid #e0e0e0;
+            font-weight: 500;
+        }
+        .segment-tag {
+            display: inline-block;
+            background-color: rgba(231, 76, 60, 0.1);
+            color: #e74c3c;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            margin-right: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(231, 76, 60, 0.2);
+        }
+        .session-toggle {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .toggle-btn {
+            background: #f0f0f0;
+            color: #555;
+            border: 1px solid #ddd;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 0 10px 15px 0;
+            transition: all 0.3s ease;
+            text-align: center;
+            min-width: 180px;
+        }
+        .toggle-btn.active {
+            background: #e74c3c;
+            color: white;
+            border-color: #c0392b;
+            box-shadow: 0 2px 5px rgba(231, 76, 60, 0.3);
+        }
+        .session-time {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+        .timeline-trigger {
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+        }
+        .timeline-trigger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+        }
+        @media (max-width: 768px) {
+            .timeline-modal-content {
+                width: 95%;
+                margin: 10% auto;
+                max-height: 85vh;
+            }
+            .timeline-modal-body {
+                padding: 20px;
+            }
+            .day-content {
+                margin-left: 40px;
+                padding: 15px 20px;
+            }
+            .time-indicator {
+                font-size: 0.75em;
+                padding: 3px 8px;
+                margin-left: 10px;
+            }
+            .toggle-btn {
+                min-width: 150px;
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -631,7 +864,7 @@
         <h2>SparkyMinis Academy</h2>
         <p class="intro">Unlock AI's potential through intensive, instructor-led workshops designed for maximum impact—combining live learning, hands-on practice, and real-world project delivery. Build practical skills that transform how you work with AI.</p>
 
-        <!-- FAQ Trigger Button -->
+        <!-- FAQ & Timeline Trigger Buttons -->
         <div style="text-align: center; margin-bottom: 40px;">
             <button class="faq-trigger" onclick="openFAQModal()">Workshop FAQs</button>
         </div>
@@ -639,7 +872,11 @@
         <div class="academy-grid">
             <div class="academy-section academy-live">
                 <div class="live-badge">🔴 LIVE WORKSHOP</div>
-                <h3>Applied AI Mastery Workshop</h3>
+                <h3>Applied Gen-AI Mastery Workshop</h3>
+                        <!-- FAQ & Timeline Trigger Buttons -->
+        <div style="text-align: center; margin-bottom: 40px;">
+            <button id="genai-timeline-btn" class="timeline-trigger" onclick="openTimelineModal()">View Workshop Timeline</button>
+        </div>
                 <p class="desc">Intensive 2 days weekend workshop for working professionals, managers, and creators. Master AI through doing—build your AI Mastery Playbook, custom AI companion, and complete a real project while learning.</p>
                 <div class="session-info">
 
@@ -742,7 +979,7 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question">Can I get corporate invoice for my company?</div>
-                <div class="faq-answer">Yes. Contact connect@sparkyminis.com for corporate billing.</div>
+                <div class="faq-answer">Yes. Contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e4878b8a8a818790a4979485968f9d898d8a8d97ca878b89">[email&#160;protected]</a> for corporate billing.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">What's included in group discount?</div>
@@ -758,17 +995,157 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question">What if I paid to book a seat and now I cannot attend the session?</div>
-                <div class="faq-answer">Unfortunately, we do not offer refunds. You can however request change of batch by sending an email to connect@sparkyminis.com.</div>
+                <div class="faq-answer">Unfortunately, we do not offer refunds. You can however request change of batch by sending an email to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1f7c7071717a7c6b5f6c6f7e6d7466727671766c317c7072">[email&#160;protected]</a>.</div>
             </div>
             <div class="faq-item" style="border-bottom: none; font-style: italic; color: #7f8c8d;">
                 <div class="faq-question">Got more questions?</div>
-                <div class="faq-answer">Email connect@sparkyminis.com—we reply within 1 working day!</div>
+                <div class="faq-answer">Email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="40232f2e2e25233400333021322b392d292e29336e232f2d">[email&#160;protected]</a>—we reply within 1 working day!</div>
             </div>
         </div>
     </div>
 </div>
 
-
+<!-- Course Timeline Modal -->
+<div id="timelineModal" class="timeline-modal">
+    <div class="timeline-modal-content">
+        <div class="timeline-modal-header">
+            <span class="timeline-close" onclick="closeTimelineModal()">&times;</span>
+            <h3>AI Mastery Workshop - 2-Day Intensive Schedule</h3>
+        </div>
+        <div class="timeline-modal-body">
+            <div class="session-toggle">
+                <button id="morningBtn" class="toggle-btn active" onclick="toggleSession('morning')">
+                    ☀️ Morning Session
+                    <div class="session-time" style="color: black;">9:00 AM - 2:20 PM (5h 20m)</div>
+                </button>
+                <button id="afternoonBtn" class="toggle-btn" onclick="toggleSession('afternoon')">
+                    🌙 Afternoon Session
+                    <div class="session-time" style="color: black;">2:00 PM - 7:20 PM (5h 20m)</div>
+                </button>
+            </div>
+            
+            <div class="timeline">
+                <!-- Day 1 -->
+                <div class="day">
+                    <div class="day-content">
+                        <h2 class="day-header">Day 1: AI Foundations & Core Skills</h2>
+                        
+                        <div class="time-slot">
+                            <div class="time-content">
+                                <div class="time"><span class="segment-tag">Segment 1</span> AI Fundamentals</div>
+                                <p>Demystify AI: Learn what LLMs actually do and why they're transforming every industry.<br>Perfect for: Executives, managers, and anyone starting their AI journey from scratch.</p>
+                            </div>
+                            <div class="time-indicator" data-morning="09:00 - 09:45" data-afternoon="14:00 - 14:45">09:00 - 09:45</div>
+                        </div>
+                        
+                        <div class="time-slot">
+                            <div class="time-content">
+                                <div class="time"><span class="segment-tag">Segment 2</span> LLM Prompting</div>
+                                <p>Master the art of asking AI the right questions—turn vague ideas into precise, powerful outputs.<br>Perfect for: Professionals who want to unlock AI's full potential and get consistent, high-quality results.</p>
+                            </div>
+                            <div class="time-indicator" data-morning="09:45 - 10:45" data-afternoon="14:45 - 15:45">09:45 - 10:45</div>
+                        </div>
+                        
+                        <div class="time-slot break">
+                            <div class="time-content">
+                                <div class="time">Break</div>
+                                <p>Short break to refresh and network.</p>
+                            </div>
+                            <div class="time-indicator" data-morning="10:45 - 10:55" data-afternoon="15:45 - 15:55">10:45 - 10:55</div>
+                        </div>
+                        
+                        <div class="time-slot">
+                            <div class="time-content">
+                                <div class="time"><span class="segment-tag">Segment 3</span> AI Ecosystem</div>
+                                <p>Navigate 50+ AI tools and discover which ones solve YOUR specific challenges—ChatGPT, Claude, Gemini, and beyond.<br>Perfect for: Decision-makers and power users who need to build their personalized AI toolkit.</p>
+                            </div>
+                            <div class="time-indicator" data-morning="10:55 - 11:55" data-afternoon="15:55 - 16:55">10:55 - 11:55</div>
+                        </div>
+                        
+                        <div class="time-slot">
+                            <div class="time-content">
+                                <div class="time"><span class="segment-tag">Segment 4</span> Communication & Documentation</div>
+                                <p>Write emails, reports, and docs 10x faster while maintaining your professional voice and tone.<br>Perfect for: Managers, consultants, and communicators drowning in writing tasks.</p>
+                            </div>
+                            <div class="time-indicator" data-morning="11:55 - 12:55" data-afternoon="16:55 - 17:55">11:55 - 12:55</div>
+                        </div>
+                        
+                        <div class="time-slot">
+                            <div class="time-content">
+                                <div class="time"><span class="segment-tag">Segment 5</span> Research & Analysis</div>
+                                <p>Conduct competitive analysis, SWOT studies, and strategic planning in hours instead of weeks.<br>Perfect for: Analysts, product managers, entrepreneurs, and strategists making data-driven decisions.</p>
+                            </div>
+                            <div class="time-indicator" data-morning="12:55 - 14:05" data-afternoon="17:55 - 19:05">12:55 - 14:05</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Day 2 -->
+                <div class="day">
+                    <div class="day-content">
+                        <h2 class="day-header">Day 2: Advanced Applications & Mastery</h2>
+                        
+                        <div class="time-slot">
+                            <div class="time-content">
+                                <div class="time"><span class="segment-tag">Segment 6</span> Creative Content</div>
+                                <p>Generate blog posts, LinkedIn content, presentations, and visuals that engage and convert.<br>Perfect for: Marketers, content creators, and entrepreneurs building their personal or brand presence.</p>
+                            </div>
+                            <div class="time-indicator" data-morning="09:00 - 10:00" data-afternoon="14:00 - 15:00">09:00 - 10:00</div>
+                        </div>
+                        
+                        <div class="time-slot break">
+                            <div class="time-content">
+                                <div class="time">Break</div>
+                                <p>Short break to refresh and network.</p>
+                            </div>
+                            <div class="time-indicator" data-morning="10:00 - 10:10" data-afternoon="15:00 - 15:10">10:00 - 10:10</div>
+                        </div>
+                        
+                        <div class="time-slot">
+                            <div class="time-content">
+                                <div class="time"><span class="segment-tag">Segment 7</span> Planning & Productivity</div>
+                                <p>Build your personal AI companion that handles recurring tasks and supercharges your daily workflow.<br>Perfect for: Project managers, entrepreneurs, and anyone juggling multiple priorities and deadlines.</p>
+                            </div>
+                            <div class="time-indicator" data-morning="10:10 - 11:10" data-afternoon="15:10 - 16:10">10:10 - 11:10</div>
+                        </div>
+                        
+                        <div class="time-slot">
+                            <div class="time-content">
+                                <div class="time"><span class="segment-tag">Segment 8</span> Advanced Techniques</div>
+                                <p>Unlock AI agents, automation workflows, RAG systems, and custom GPTs for enterprise-grade solutions.<br>Perfect for: Tech-savvy professionals and innovators ready to build sophisticated AI-powered systems.</p>
+                            </div>
+                            <div class="time-indicator" data-morning="11:10 - 12:10" data-afternoon="16:10 - 17:10">11:10 - 12:10</div>
+                        </div>
+                        
+                        <div class="time-slot break">
+                            <div class="time-content">
+                                <div class="time">Break</div>
+                                <p>Short break to refresh and network.</p>
+                            </div>
+                            <div class="time-indicator" data-morning="12:10 - 12:20" data-afternoon="17:10 - 17:20">12:10 - 12:20</div>
+                        </div>
+                        
+                        <div class="time-slot">
+                            <div class="time-content">
+                                <div class="time"><span class="segment-tag">Segment 9</span> Mastery Playbook</div>
+                                <p>Consolidate everything into your personalized reference system—templates, prompts, frameworks you'll use forever.<br>Perfect for: Everyone—your Playbook becomes your AI operating manual and competitive advantage.</p>
+                            </div>
+                            <div class="time-indicator" data-morning="12:20 - 13:20" data-afternoon="17:20 - 18:20">12:20 - 13:20</div>
+                        </div>
+                        
+                        <div class="time-slot">
+                            <div class="time-content">
+                                <div class="time"><span class="segment-tag">Segment 10</span> Future of AI</div>
+                                <p>Master responsible AI use, create your 7-day action plan, and launch your AI-powered future with accountability partners.<br>Perfect for: Everyone—leave with momentum, clarity, and a concrete plan to transform your work.</p>
+                            </div>
+                            <div class="time-indicator" data-morning="13:20 - 14:20" data-afternoon="18:20 - 19:20">13:20 - 14:20</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <section id="connect" class="connect">
         <h2>Connect & Collaborate</h2>
@@ -779,13 +1156,13 @@
                 <h3>Media & Partnerships</h3>
                 <p>Collaborate on content: Guest spots on our channels, co-branded travels, or recipe features.</p>
                 <a href="https://www.instagram.com/thesparkytrips" target="_blank" rel="noopener noreferrer">Follow @thesparkytrips</a><br>
-                <a href="mailto:connect@sparkyminis.com">connect@sparkyminis.com</a>
+                <a href="/cdn-cgi/l/email-protection#e0838f8e8e858394a0939081928b998d898e8993ce838f8d"><span class="__cf_email__" data-cfemail="1b787475757e786f5b686b7a697062767275726835787476">[email&#160;protected]</span></a>
             </div>
             <div class="connect-card">
                 <h3>Tech & Academy Inquiries</h3>
                 <p>For LipiKit products, workshop bookings, or custom trainings.</p>
                 <a href="https://lipikit.com" target="_blank" rel="noopener noreferrer">lipikit.com</a><br>
-                <a href="mailto:connect@sparkyminis.com">connect@sparkyminis.com</a>
+                <a href="/cdn-cgi/l/email-protection#04676b6a6a61677044777465766f7d696d6a6d772a676b69"><span class="__cf_email__" data-cfemail="eb888485858e889fab989b8a9980928682858298c5888486">[email&#160;protected]</span></a>
             </div>
             <div class="connect-card">
                 <h3>General Sparks</h3>
@@ -848,7 +1225,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         function toggleNav() {
             document.querySelector('.nav-links').classList.toggle('active');
         }
@@ -944,6 +1321,46 @@
             });
         });
       
+        // Timeline Modal Functions
+        function openTimelineModal() {
+            document.getElementById('timelineModal').style.display = 'block';
+            // Reset to morning session when opening
+            toggleSession('morning');
+        }
+        function closeTimelineModal() {
+            document.getElementById('timelineModal').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            const faqModal = document.getElementById('faqModal');
+            const timelineModal = document.getElementById('timelineModal');
+            if (event.target === faqModal) {
+                closeFAQModal();
+            }
+            if (event.target === timelineModal) {
+                closeTimelineModal();
+            }
+        }
+        
+        function toggleSession(session) {
+            const morningBtn = document.getElementById('morningBtn');
+            const afternoonBtn = document.getElementById('afternoonBtn');
+            const timeIndicators = document.querySelectorAll('.time-indicator');
+            
+            if (session === 'morning') {
+                morningBtn.classList.add('active');
+                afternoonBtn.classList.remove('active');
+                timeIndicators.forEach(indicator => {
+                    indicator.textContent = indicator.getAttribute('data-morning');
+                });
+            } else {
+                morningBtn.classList.remove('active');
+                afternoonBtn.classList.add('active');
+                timeIndicators.forEach(indicator => {
+                    indicator.textContent = indicator.getAttribute('data-afternoon');
+                });
+            }
+        }
+      
         // Scrollspy for active nav & dots
         const sections = ['spark', 'vision', 'ecosystem', 'academy', 'connect'];
         const links = document.querySelectorAll('.nav-link');
@@ -962,6 +1379,26 @@
                 dot.classList.toggle('active', i === sections.indexOf(current));
             });
         });
+
+        // Direct linking to timeline modal
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check URL hash on page load
+            if (window.location.hash === '#genai-timeline') {
+                openTimelineModal();
+            }
+            
+            // Update URL when opening modal
+            document.getElementById('genai-timeline-btn').addEventListener('click', function() {
+                history.pushState(null, '', '#genai-timeline');
+            });
+        });
+        
+        // Close modal when clicking the back button
+        window.addEventListener('popstate', function() {
+            if (!window.location.hash.includes('genai-timeline')) {
+                closeTimelineModal();
+            }
+        });
     </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'992899466e703d18',t:'MTc2MTEzMTk1Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
